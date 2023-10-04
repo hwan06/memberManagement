@@ -28,16 +28,22 @@ else { // 관리자 체크박스에 체크 X
 					Userlogin = isUserLogin(); 
 				}
 ```
-![image](https://github.com/hwan06/memberManagement/assets/114748934/efcae498-9409-4481-91d5-1c82c612a341)
+![image](https://github.com/hwan06/memberManagement/assets/114748934/efcae498-9409-4481-91d5-1c82c612a341)   
 
 ## 회원가입(사용자 전용)
-![image](https://github.com/hwan06/memberManagement/assets/114748934/69cf3285-aa38-49e0-a975-f81b697be39a)   
-그림의 모든 항목에 조건에 맞추어 작성한 뒤 회원 가입하기 버튼을 누르면 회원정보가 저장된다.
-
+![image](https://github.com/hwan06/memberManagement/assets/114748934/69cf3285-aa38-49e0-a975-f81b697be39a)    
+그림의 모든 항목에 조건에 맞추어 작성한 뒤 회원 가입하기 버튼을 누르면 회원정보가 저장된다.   
+```java
+		checkEmpty = ischeckEmpty(); // 빈칸 확인 
+		checkId = ischeckId(); // ID 중복 여부 
+		checkPw = ischeckPw(); // 암호 확인
+		checkNum = ischeckNum(); // 올바른 학번 (1~12반, 1~30번)
+```
+메소드를 생성하여 각 조건을 확인한다. 네 개의 조건을 모두 충족하면 회원가입 진행.
 ## 본인정보 수정(사용자 전용)
-![image](https://github.com/hwan06/memberManagement/assets/114748934/3124eb00-8d39-4c5a-b7f0-32a9087fb045)
-수정하고 싶은 정보를 바꾼 뒤에 회원 정보 수정하기를 선택하면 정보가 수정된다.
+![image](https://github.com/hwan06/memberManagement/assets/114748934/3124eb00-8d39-4c5a-b7f0-32a9087fb045)   
+수정하고 싶은 정보를 바꾼 뒤에 회원 정보 수정하기를 선택하면 정보가 수정된다. 이 또한 위의 조건을 충족할 경우에만 실행.
 
 ## 회원관리메뉴(관리자 전용)
-![image](https://github.com/hwan06/memberManagement/assets/114748934/4ad55bf5-7b62-4727-bf8f-b3da02b481c1)   
+![image](https://github.com/hwan06/memberManagement/assets/114748934/4ad55bf5-7b62-4727-bf8f-b3da02b481c1)    
 밑의 표에서 사용자를 선택하면, 그 사용자의 정보가 자동으로 입력되어 바꾸고 싶은 정보를 바꾼 뒤에 수정 버튼을 누르면 수정된다.
